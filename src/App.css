@@ -1,0 +1,266 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.selected-weather{
+  width: 70%;
+
+  margin: 30px auto;
+  /* background-color: #e6e6e9; */
+}
+.search {
+  display: flex;
+  position: relative;
+}
+.search > input[type="text"]{
+  border: none;
+  /* outline: none; */
+  
+  padding: 13px 25px;
+  /* border-radius: 7px; */
+  font-size: 16px;
+  transition: background .3s linear;
+}
+.search > input[type="text"]:hover,
+.search > input[type="text"]:focus{
+  background-color: #e6e6e9;
+}
+.search > input[type="text"]::placeholder{
+  color: #000;
+  font-weight: 550;
+}
+
+.search > #search-icon {
+  position: absolute;
+  left: 0px;
+  top: 12px;
+}
+.temperature{
+  font-size: 80px;
+}
+.date-time{
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.date-time > .time{
+  color: #a4a6ac;
+}
+.weather-main{
+  display: flex;
+  margin-top: 30px;
+  position: relative;
+}
+.weather-main + .weather-main{
+  margin-top: 20px;
+}
+.weather-main > .icon {
+  font-size: 25px;
+  margin-right: 5px;
+}
+.location{
+  position: relative;
+}
+.background{
+  margin-top: 45px;
+  width: 100%;
+  height: 100px;
+  border-radius: 17px;
+  background-image: url('./img/location/america.jpg');
+  background-attachment: fixed;
+  background-size: 100%;
+  background-position: center;
+  color: #fff;
+  position: relative;
+}
+.background > *{
+  position: absolute;
+  left: 40px;
+  top: 40px;
+}
+.wrap{
+  width: 95%;
+  /* background-color: #ccc; */
+  margin: 30px auto;
+}
+.control{
+  display: flex;
+  justify-content: space-between;
+}
+.type-select,
+.temperature-setting{
+  display: flex;
+  cursor: pointer;
+}
+.week-option,
+.temperature-f{
+  margin-left: 15px;
+}
+.week-option,
+.date-option{
+  font-size: 20px;
+  font-weight: 500;
+  color: #a4a6ac;
+  
+}
+.active {
+  color: #000;
+  position: relative;
+}
+.active::after{
+  content: "";
+  width: 50px;
+  height: 2px;
+  background-color: #000;
+  position: absolute;
+  top: 35px;
+  left: 2px;
+}
+.min{
+  margin-left: 5px;
+}
+
+.text{
+  font-size: 25px;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.card-info{
+  width: 85%;
+  height: 80%;
+  margin: auto;
+}
+.card-info > .card-title{
+  font-size: 18px;
+  font-weight: 500;
+  color: #a4a6ac;
+  margin-bottom: 10px;
+}
+.card-weather-description{
+  margin-top: 10px;
+}
+.card-weather-main,
+.card-weather-description{
+  font-size: 16px;
+  font-weight: 400;
+}
+.status-main{
+  font-size: 50px;
+  font-weight: 500;
+
+}
+.status{
+  position: relative;
+}
+.other-info{
+  position: relative;
+  margin-top: 10px;
+}
+.other-icon{
+  font-size:25px;
+  position: absolute;
+  top: 0px;
+}
+.other-value{
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: 30px;
+}
+.recommend{
+  position: relative;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.temp-max,
+.temp-min{
+  display: flex;
+  margin-left: 10px;
+}
+.temp{
+  font-size: 17px;
+  font-weight: 500;
+  margin-left: 20px;
+  margin-top: 8px;
+}
+.autocompleted-items{
+  background-color: #fff;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  width: 244px;
+  z-index: 99;
+  border: 1px solid #d4d4d4;
+  border-top: none ;
+  border-bottom: none;
+}
+.autocompleted-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #d4d4d4;
+  /* width: 244px; */
+}
+.autocompleted-items div:hover {
+  /*when hovering an item:*/
+  background-color: #e9e9e9;
+}
+.autocomplete-active {
+  /*when navigating through the items using the arrow keys:*/
+  background-color: DodgerBlue !important;
+  color: #ffffff;
+}
+.weather-info{
+  text-transform: capitalize;
+}
+
+
+.location-name{
+  font-size: 13px;
+  font-weight: 600;
+}
+.position{
+  margin-top: 20px;
+}
+.lat,
+.lon{
+  font-size: 15px;
+}
